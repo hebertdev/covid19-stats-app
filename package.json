@@ -1,0 +1,27 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "description": "My perfect Nuxt.js project",
+  "author": "Hebert Villafuerte",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "chart.js": "^2.9.3",
+    "cross-env": "^5.2.0",
+    "frontmatter-markdown-loader": "^3.3.0",
+    "hchs-vue-charts": "^1.2.8",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.12.1",
+    "sass-loader": "^8.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
