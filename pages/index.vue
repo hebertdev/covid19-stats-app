@@ -15,7 +15,7 @@
          class="imgbanner"
          src="@/static/img/covid192.png"
          >
-         <div class="txt-description-author">SPA - PWA contruido por <a href="">Hebert Villafuerte</a> - 2020 </div>
+         <div class="txt-description-author">SPA - PWA contruido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
        </div>
      </div>
    </div>
@@ -39,6 +39,10 @@
 </script>
 
 <style>
+
+body{
+  background: #e83a57;
+}
 .txt-description-author{
   text-align: center;
   width: 100%;
