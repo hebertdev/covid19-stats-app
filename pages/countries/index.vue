@@ -5,6 +5,9 @@
    <div class="max-container-title">
      <h1 style="" class="title-date">Datos hasta la fecha : {{date}} </h1> 
    </div>
+   <div class="max-container-search">
+     <SearchCountry />
+   </div>
    <div  class="container-all-countries">
      <countriesCard v-for="country in countries" :key="country.id" :country="country" v-if="country.TotalConfirmed>0" />
 
@@ -19,6 +22,8 @@
  <script>
   import headerone from '~/components/header.vue'
   import countriesCard from '~/components/countries/countriesCard'
+  import SearchCountry from '~/components/includes/SearchCountry.vue'
+
 
   export default {
     head() {
@@ -29,6 +34,7 @@
     components: {
       countriesCard,
       headerone,
+      SearchCountry
     },
 
 
@@ -67,6 +73,11 @@
 
 <style>
 
+.max-container-search{
+  max-width: 1000px;
+  margin: auto;
+  width: 95%;
+}
 .container-all-countries{
   max-width: 1000px;
   width: 95%;
