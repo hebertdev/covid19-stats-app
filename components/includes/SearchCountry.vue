@@ -88,8 +88,7 @@
   margin:auto;
   max-height: 300px;
   overflow: auto;
-  border: 1px solid rgba(0,0,0,0.2)
-  
+
 }
 .ListSearch li{
   list-style: none;
