@@ -40,9 +40,6 @@
 
 <style>
 
-body{
-  background: #e83a57;
-}
 .txt-description-author{
   text-align: center;
   width: 100%;
