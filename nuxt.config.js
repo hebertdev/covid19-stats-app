@@ -70,7 +70,7 @@ export default {
   */
   manifest: {
     name: 'Informacion acerca de Covid19',
-    short_name: 'Covid19all',
+    short_name: 'covid19 Stats',
     lang: 'es',
     display: 'standalone',
   },
