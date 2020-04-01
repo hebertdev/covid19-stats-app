@@ -9,7 +9,7 @@
          ></nuxt-link>
 
          <div>
-           <input type="text" placeholder="search Country" class="txt-search-input" v-model="country" autocomplete="off">
+           <input onkeyup="javascript:this.value=this.value.toLowerCase(); type="text" placeholder="search Country" class="txt-search-input" v-model="country" autocomplete="off">
            <ul class="container-list-result-search" v-if="country.length>0">
              <li v-for="country in searchUser" class=""> <nuxt-link v-if="country.TotalConfirmed>0" class="result-continaer-item"  :to="`/countries/${country.Slug}`">{{country.Country}}</nuxt-link></li>
             

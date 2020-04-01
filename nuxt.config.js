@@ -69,7 +69,7 @@ export default {
   ** Overwrite's generated manifest values
   */
   manifest: {
-    name: 'Info Data Covid',
+    name: 'Informacion acerca de Covid19',
     short_name: 'Covid19all',
     lang: 'es',
     display: 'standalone',
