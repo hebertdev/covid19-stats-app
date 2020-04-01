@@ -1,7 +1,7 @@
 <template>
   <div class="">
    <headerone />
-   <div style="height: 80px;background: red;"></div>
+   <div style="height: 50px;background: red;"></div>
    <div class="max-container-title">
      <h1 style="" class="title-date">Datos hasta la fecha : {{date}} </h1> 
    </div>
@@ -50,9 +50,6 @@
 
    asyncData ({ $axios }) {
     return $axios.get('/summary').then((res) => {
-
-
-
 
       var fecha =  new Intl.DateTimeFormat('es-PE' , {month:'long' , day:'numeric' , year:'numeric'}).format(new Date(res.data.Date))
 

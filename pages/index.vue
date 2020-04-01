@@ -11,11 +11,13 @@
          <nuxt-link to="./countries" class="btn-view-all-countries">Ver todos los países</nuxt-link>
        </div>
        <div class="side-right">
-         <img
-         class="imgbanner"
-         src="@/static/img/covid192.png"
-         >
-         <div class="txt-description-author">SPA - PWA contruido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
+
+        <section>
+        
+           <ChartDoughnut></ChartDoughnut>
+     
+        </section>
+                  <div class="txt-description-author">SPA - PWA contruido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
        </div>
      </div>
    </div>
@@ -27,12 +29,15 @@
   import Logo from '~/components/Logo.vue'
   import headerone from '~/components/header.vue'
   import SearchCountry from '~/components/includes/SearchCountry.vue'
+  import ChartDoughnut from "@/components/chart-doughnut";
+
 
   export default {
     components: {
       Logo,
       headerone,
       SearchCountry,
+      ChartDoughnut,
 
     }
   }
@@ -43,15 +48,15 @@
 .txt-description-author{
   text-align: center;
   width: 100%;
-  color: white;
+  color: #666;
+  margin:20px 0; 
 }
 .txt-description-author a{
-  color: white;
+  color: #666;
 }
 .banner{
   width: 100%;
   height: 100vh;
-  background: #e83a57;
 }
 .max-banner{
   max-width: 1100px;
@@ -67,6 +72,7 @@
   color: white;
   font-size: 60px;
   line-height: 60px;
+  color: #333333;
 }
 
 .side-left{
@@ -89,7 +95,7 @@
   display: block;
   width: 200px;
   text-align: center;
-  background: orange;
+  background: #e83a57;
   color: white;
   margin: 10px 0;
   padding: 10px;
@@ -110,7 +116,7 @@
     display: block;
   }
   .title-banner{
-    color: white;
+    color: #333333;
     font-size: 40px;
     line-height: 40px;
   }

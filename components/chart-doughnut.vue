@@ -1,19 +1,21 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Doughnut</h2>
-    </div>
+  <div>
+   
+      <h2 class="card-title-donut">Datos totales de Covid19 en el mundo a la fecha 31 de marzo 2020</h2>
 
-    <div class="card-img-bottom">
+
+
+    
       <chartjs-doughnut
         :bind="true"
         :datasets="datasets"
         :labels="labels"
         :option="option"
       />
-    </div>
+
   </div>
 </template>
+
 
 <script>
 export default {
@@ -21,14 +23,24 @@ export default {
     return {
       datasets: [
         {
-          data: [10, 20, 40],
-          backgroundColor: ["#f36e60", "#ffdb3b", "#185190"],
-          hoverBackgroundColor: ["#fbd2cd", "#fef5c9", "#d1e3f7"]
+          data: [783.891, 159.228, 37.759 ],
+          backgroundColor: ["orange", "#33921b", "#e83a57"],
+          hoverBackgroundColor: ["orange", "#33921b", "#e83a57"]
         }
       ],
-      labels: ["Foo", "Bar", "Baz"],
+      labels: ["Confirmados", "Recuperados", "Fallecidos"],
       option: {}
     };
   }
 };
 </script>
+
+
+<style>
+  .card-title-donut{
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #333333;
+  }
+</style>

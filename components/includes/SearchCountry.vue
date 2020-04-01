@@ -1,12 +1,11 @@
 <template>
   <div>
 
-    <small class="txt-info-input">la primera letra en mayuscula </small>
-    <input  class="inputSearchCountry" type="text" placeholder="buscar ejm: Peru" v-model="name" autocapitalize="word" >
+    <input onkeyup="javascript:this.value=this.value.toLowerCase();"   class="inputSearchCountry" type="text" placeholder="buscar ejm: Peru" v-model="name" autocapitalize="word" >
 
-    <div class="ListSearch">
+    <div class="ListSearch" v-if="name.length>0" >
       <li  v-for="item in searchUser" class="" v-model="name" v-if="name.length>0" >
-        <nuxt-link v-if="item.TotalConfirmed>0" class="link-result" :to="`/countries/${item.Slug}`">{{ item.Country }}</nuxt-link>
+        <nuxt-link v-if="item.TotalConfirmed>0" class="link-result" :to="`/countries/${item.Slug}`">{{ item.Slug }}</nuxt-link>
       </li>
 
     </div>     
@@ -54,7 +53,7 @@
 
     computed: {
       searchUser: function () {
-        return this.lists.filter((item) => item.Country.includes(this.name));
+        return this.lists.filter((item) => item.Slug.includes(this.name));
       }
     },
 
@@ -83,11 +82,13 @@
 .ListSearch{
   background: white;
   max-width: 500px;
-  position: fixed;
+  position: absolute;
   width: 90%;
   margin:auto;
   max-height: 300px;
   overflow: auto;
+  border: 1px solid rgba(0,0,0,0.3);
+
 
 }
 .ListSearch li{
@@ -118,7 +119,11 @@
   padding: 10px;
   color: #333333;
   font-size: 16px;
-  border: 1px solid rgba(0,0,0,0.2)
+  border: 1px solid #333333;
+  border: 1px solid rgba(0,0,0,0.2);
+
+
+
 }
 
 .inputSearchCountry:first-letter {
