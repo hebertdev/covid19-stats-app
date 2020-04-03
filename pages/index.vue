@@ -11,13 +11,10 @@
          <nuxt-link to="./countries" class="btn-view-all-countries">Ver todos los países</nuxt-link>
        </div>
        <div class="side-right">
-
-        <section>
-        
-           <ChartDoughnut></ChartDoughnut>
-     
-        </section>
-                  <div class="txt-description-author">SPA - PWA contruido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
+                  <img
+         class=""
+         src="@/static/img/protegetedelcovid.png">
+                  <div class="txt-description-author">SPA - PWA construido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
        </div>
      </div>
    </div>
@@ -40,6 +37,9 @@
       ChartDoughnut,
 
     }
+
+
+
   }
 </script>
 

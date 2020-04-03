@@ -91,7 +91,7 @@
           let countryrecovered = await this.$axios.$get(`live/country/${countridata}/status/recovered`);
           let countrydeaths = await this.$axios.$get(`live/country/${countridata}/status/deaths`);
 
-
+          console.log(countryconfirmed)
 
           let ultimorecoveredDato = countryrecovered[countryrecovered.length-1]
           let ultimoconfirmedDato = countryconfirmed[countryconfirmed.length-1]

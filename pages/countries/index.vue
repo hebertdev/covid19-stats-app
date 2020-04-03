@@ -53,6 +53,7 @@
 
       var fecha =  new Intl.DateTimeFormat('es-PE' , {month:'long' , day:'numeric' , year:'numeric'}).format(new Date(res.data.Date))
 
+
       return {
         'countries':res.data.Countries ,
         'date':fecha,
