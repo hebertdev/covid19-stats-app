@@ -69,8 +69,8 @@ export default {
   ** Overwrite's generated manifest values
   */
   manifest: {
-    name: 'Informacion acerca de Covid19',
-    short_name: 'covid19 Stats',
+    name: 'Informacion acerca del Covid 19 - Peru',
+    short_name: 'Estadísticas Covid-19',
     lang: 'es',
     display: 'standalone',
   },

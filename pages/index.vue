@@ -12,7 +12,7 @@
        </div>
        <div class="side-right">
                   <img
-         class=""
+         style="width: 100%;"
          src="@/static/img/protegetedelcovid.png">
                   <div class="txt-description-author">SPA - PWA construido por <a href="https://www.instagram.com/hebertdev_/" target="_blank">Hebert Villafuerte</a> - 2020 </div>
        </div>
