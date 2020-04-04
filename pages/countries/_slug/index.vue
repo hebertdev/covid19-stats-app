@@ -87,9 +87,9 @@
           let countridata = paths[paths.length-1];
           console.log(countridata)
 
-          let countryconfirmed = await this.$axios.$get(`live/country/${countridata}/status/confirmed`);
-          let countryrecovered = await this.$axios.$get(`live/country/${countridata}/status/recovered`);
-          let countrydeaths = await this.$axios.$get(`live/country/${countridata}/status/deaths`);
+          let countryconfirmed = await this.$axios.$get(`/country/${countridata}/status/confirmed/live`);
+          let countryrecovered = await this.$axios.$get(`/country/${countridata}/status/recovered/live`);
+          let countrydeaths = await this.$axios.$get(`/country/${countridata}/status/deaths/live`);
 
           console.log(countryconfirmed)
 
