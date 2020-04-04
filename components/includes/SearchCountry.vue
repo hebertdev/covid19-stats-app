@@ -39,7 +39,7 @@
 
           let nuevasurls = urlUsers.Countries
           this.lists = urlUsers.Countries
-          console.log(this.lists)
+        
 
         } catch (e) {
           console.log(e)
