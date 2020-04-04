@@ -1,20 +1,20 @@
 <template>
  <div >
    <div class="card">
-     <p class="card-header-title">{{ country.Country}}  </p>
+     <p class="card-header-title"> {{item.Country}} </p>
      <div class="legend-card">
        <ul>
-         <li class="list-points"><span class="span-color-uno">. </span> Confirmados:  <span class="spandata">{{country.TotalConfirmed}}</span></li>
-         <li class="list-points"><span class="span-color-cuatro">. </span> New confirmed: <span class="spandata">{{country.NewConfirmed}}</span></li>
+         <li class="list-points"><span class="span-color-uno">. </span> Confirmados:  <span class="spandata">{{item.TotalConfirmed}}</span></li>
+         <li class="list-points"><span class="span-color-cuatro">. </span> New confirmed: <span class="spandata">{{item.NewConfirmed}}</span></li>
          <br>
-         <li class="list-points"><span class="span-color-dos">. </span> Recuperados:  <span class="spandata">{{country.TotalRecovered}}</span></li>
-         <li class="list-points"><span class="span-color-cinco">. </span> New Recovered:  <span class="spandata">{{country.NewRecovered}}</span></li>
+         <li class="list-points"><span class="span-color-dos">. </span> Recuperados:  <span class="spandata">{{item.TotalRecovered}}</span></li>
+         <li class="list-points"><span class="span-color-cinco">. </span> New Recovered:  <span class="spandata">{{item.NewRecovered}}</span></li>
          <br>
-         <li class="list-points"><span class="span-color-tres">. </span> Muertos: <span class="spandata">{{country.TotalDeaths}}</span></li>
-         <li class="list-points"><span class="span-color-seis">. </span> New Deaths: <span class="spandata">{{country.NewDeaths}}</span></li>
+         <li class="list-points"><span class="span-color-tres">. </span> Muertos: <span class="spandata">{{item.TotalDeaths}}</span></li>
+         <li class="list-points"><span class="span-color-seis">. </span> New Deaths: <span class="spandata">{{item.NewDeaths}}</span></li>
          
        </ul>
-       <nuxt-link :to="`/countries/${country.Slug}`" class="button-stats-country2"> Estadísticas </nuxt-link> 
+       <nuxt-link :to="`/countries/${item.Slug}`" class="button-stats-country2"> Estadísticas </nuxt-link> 
      </div>
    </div>
  </div>
@@ -22,7 +22,7 @@
 <script>
 export default {
  props: {
-   country: {
+   item: {
      type: Object
    }
  },

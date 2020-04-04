@@ -6,20 +6,28 @@
      <h1 style="" class="title-date">Datos hasta la fecha : {{date}} </h1> 
    </div>
    <div class="max-container-search">
-     <SearchCountry />
+     <div>
+
+      <input onkeyup="javascript:this.value=this.value.toLowerCase();"   class="inputSearchCountry" type="text" placeholder="buscar ejm: Peru"  autocapitalize="word" v-model="namecountry" >    
+
+      <div class="let">
+
+      </div>
+      <small class="small-txt">Los datos provienen de <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" class="link-txt">Johns Hopkins CSSE.</a></small>
+    </div>
+  </div>
+  <div  class="container-all-countries">
+   <countriesCard v-for="item in searchUser"  :item="item" :key="item.id" v-if="item.TotalConfirmed>0" />
+  
    </div>
-   <div  class="container-all-countries">
-     <countriesCard v-for="country in countries" :key="country.id" :country="country" v-if="country.TotalConfirmed>0" />
 
-     </div>
-
-   </div>
- </template>
+ </div>
+</template>
 
 
 
 
- <script>
+<script>
   import headerone from '~/components/header.vue'
   import countriesCard from '~/components/countries/countriesCard'
   import SearchCountry from '~/components/includes/SearchCountry.vue'
@@ -34,17 +42,17 @@
     components: {
       countriesCard,
       headerone,
-      SearchCountry
+
     },
 
 
     data: function() {
       return {
        rutanew: this.$route.path,
+       countrylist:[],
+       namecountry:'',
      };
    },
-
-
 
 
 
@@ -57,11 +65,16 @@
       return {
         'countries':res.data.Countries ,
         'date':fecha,
-
-
       }
     })
   },
+
+
+  computed: {
+      searchUser: function () {
+        return this.countries.filter((item) => item.Slug.includes(this.namecountry));
+      }
+    },
 
 };
 

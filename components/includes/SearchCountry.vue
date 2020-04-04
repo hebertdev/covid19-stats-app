@@ -135,11 +135,11 @@
 }
 
 .small-txt{
-  color: white;
+  color: #333333;
 }
 
 .link-txt{
-  color: white;
+  color: #333333;
 }
 
 </style>

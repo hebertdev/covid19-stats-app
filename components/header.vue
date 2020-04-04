@@ -48,7 +48,7 @@
 						</ul>
 						<div style="display: flex;justify-content: space-between;align-items: center;width: 100%;">
 							<a href="tel:113" class="link-one-emergency"> <img width="25" src="@/static/img/call.png" alt=""> Llamar ahora</a>
-							<a href="https://api.whatsapp.com/send?phone=51952842623&text=Hola%20necesito%20Ayuda" class="link-one-emergency"> <img width="25" src="@/static/img/whatsapp.webp" alt=""> Enviar Mensaje</a>
+							<a href="https://api.whatsapp.com/send?phone=952842623&text=Hola%20necesito%20Ayuda" class="link-one-emergency"> <img width="25" src="@/static/img/whatsapp.webp" alt=""> Enviar Mensaje</a>
 						</div>
 						<p style="text-align: center;">Disponible las 24 horas</p>
 						<br>
