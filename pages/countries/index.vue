@@ -2,6 +2,8 @@
   <div class="">
    <headerone />
    <div style="height: 50px;background: red;"></div>
+   <globalData/>
+
    <div class="max-container-title">
      <h1 style="" class="title-date">Datos hasta la fecha : {{date}} </h1> 
    </div>
@@ -31,6 +33,8 @@
   import headerone from '~/components/header.vue'
   import countriesCard from '~/components/countries/countriesCard'
   import SearchCountry from '~/components/includes/SearchCountry.vue'
+  import globalData from '~/components/includes/globalData.vue'
+
 
 
   export default {
@@ -42,6 +46,8 @@
     components: {
       countriesCard,
       headerone,
+      globalData,
+
 
     },
 

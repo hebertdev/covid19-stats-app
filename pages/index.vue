@@ -3,7 +3,12 @@
    <headerone />
    
    <div class="banner">
+    <div style="height: 80px"></div>
+    <div>
+      <globalData/>
+    </div>
      <div class="max-banner">
+
        <div class="side-left">
           <div style="" class="storbo"></div>
          <h1 class="title-banner">Datos acerca del Covid-19</h1>
@@ -26,6 +31,7 @@
   import Logo from '~/components/Logo.vue'
   import headerone from '~/components/header.vue'
   import SearchCountry from '~/components/includes/SearchCountry.vue'
+  import globalData from '~/components/includes/globalData.vue'
   import ChartDoughnut from "@/components/chart-doughnut";
 
 
@@ -35,6 +41,7 @@
       headerone,
       SearchCountry,
       ChartDoughnut,
+      globalData,
 
     }
 
@@ -60,8 +67,6 @@
 }
 .max-banner{
   max-width: 1100px;
-  height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
