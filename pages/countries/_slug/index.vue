@@ -93,12 +93,15 @@
 
           
 
+
+          let FechaActual = countryrecovered[countryrecovered.length-1].Date
+
           let ultimorecoveredDato = countryrecovered[countryrecovered.length-1]
           let ultimoconfirmedDato = countryconfirmed[countryconfirmed.length-1]
           let ultimodeathsDato = countrydeaths[countrydeaths.length-1]
 
-          let fechaformateada = new Intl.DateTimeFormat('es-PE' , {month:'long' , day:'numeric' , year:'numeric'}).format(new Date(ultimorecoveredDato.Date))
-          this.fecha = fechaformateada;
+          let fechaformateada = new Intl.DateTimeFormat('es-MX' , {month:'long' , day:'numeric' , year:'numeric'}).format(new Date(FechaActual))
+          this.fecha = FechaActual;
 
           this.recuperados = ultimorecoveredDato
           this.confirmados = ultimoconfirmedDato

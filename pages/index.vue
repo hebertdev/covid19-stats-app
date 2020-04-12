@@ -10,7 +10,6 @@
      <div class="max-banner">
 
        <div class="side-left">
-          <div style="" class="storbo"></div>
          <h1 class="title-banner">Datos acerca del Covid-19</h1>
          <SearchCountry />
          <nuxt-link to="./countries" class="btn-view-all-countries">Ver todos los países</nuxt-link>
