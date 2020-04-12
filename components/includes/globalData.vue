@@ -1,7 +1,7 @@
 <template>
 	<div>
 
-		<h1 style="text-align: center;color: #666;">DATOS TOTALES DEL COVID19 EN EL MUNDO</h1>
+		<h1 class="title-covid-global-data" style="text-align: center;color: #666;">DATOS TOTALES DEL COVID19 EN EL MUNDO</h1>
 		<div class="container-global-data">
 			<ul>
 				<li class="list-li"> <span class="puntos-colors" style="background: #ffbc00;"></span> <span class="txt-info-ddata">Confirmados: {{dataGlobal.TotalConfirmed}}</span></li>
@@ -36,7 +36,6 @@
 
 					let urlUsers = await this.$axios.$get(`/summary`)
 					let nuevasurls = urlUsers.Countries
-					console.log(urlUsers.Global)
 					this.dataGlobal = urlUsers.Global
 				} catch (e) {
 					console.log(e)
@@ -55,6 +54,15 @@
 
 
 <style>
+
+.title-covid-global-data{
+	text-align: center;
+	color: #666;
+	display: block;
+	max-width: 900px;
+	width: 95%;
+	margin: auto;
+}
 
 .container-global-data{
 	max-width: 1000px;
@@ -88,6 +96,10 @@
 @media screen and (max-width: 600px){
 	.container-global-data{
 		display: block;
+	}
+
+	.title-covid-global-data{
+		font-size: 30px;
 	}
 }
 </style>

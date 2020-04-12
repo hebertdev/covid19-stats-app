@@ -85,13 +85,13 @@
           this.ruta3 = this.$route.path
           let paths = this.ruta3.split('/');
           let countridata = paths[paths.length-1];
-          console.log(countridata)
+         
 
           let countryconfirmed = await this.$axios.$get(`/country/${countridata}/status/confirmed/live`);
           let countryrecovered = await this.$axios.$get(`/country/${countridata}/status/recovered/live`);
           let countrydeaths = await this.$axios.$get(`/country/${countridata}/status/deaths/live`);
 
-          console.log(countryconfirmed)
+          
 
           let ultimorecoveredDato = countryrecovered[countryrecovered.length-1]
           let ultimoconfirmedDato = countryconfirmed[countryconfirmed.length-1]
