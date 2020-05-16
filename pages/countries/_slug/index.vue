@@ -12,9 +12,9 @@
           <small class="txt-data-country">datos hasta la fecha: {{fecha}}</small>
           <div>
             <ul class="container-info-micro-data">
-             <li class="list-points"><span class="span-color-uno">. </span> Confirmados: {{confirmados.Cases}} </li>
-             <li class="list-points"><span class="span-color-dos">.</span> Recuperados: {{recuperados.Cases}} </li>
-             <li class="list-points"><span class="span-color-tres">. </span> Muertos: {{muertos.Cases}} </li>
+             <li class="list-points"><span class="span-color-uno">. </span> <b>Confirmados:</b> {{confirmados.Cases}} </li>
+             <li class="list-points"><span class="span-color-dos">.</span> <b>Recuperados:</b> {{recuperados.Cases}} </li>
+             <li class="list-points"><span class="span-color-tres">. </span> <b>Muertos:</b> {{muertos.Cases}} </li>
            </ul>
          </div>
          
@@ -23,19 +23,25 @@
 
      <div class="side-right-profile-country">
       <h1 class="txt-title-data-graphic" style="color: #333333;text-align: center;" > DATOS GENERALES </h1>
+
       <template>
-        <ChartDoughnut />
+        <ChartDoughnut></ChartDoughnut>
       </template>
-      <h1 class="txt-title-data-graphic" style="color: #333333;text-align: center;" > DATOS DESDE EL PRIMER CONFIRMADO </h1>
-      <div>
-        <template>
-          <ChartBar v-if="loaded"/>
-        </template>
-        <a class="link-boton-regresar" href="javascript:window.history.back();">« Volver atrás</a>
-        
-      </div>
+      <h1 class="txt-title-data-graphic" style="color: #333333;text-align: center;" > TOPES DE CASO POR DÍA </h1>
+      <template>
+        <ChartBar2></ChartBar2>
+     </template>
+     
+     <h1 class="txt-title-data-graphic" style="color: #333333;text-align: center;" > DATOS DESDE EL PRIMER CONFIRMADO </h1>
+     <div>
+      <template>
+        <ChartBar v-if="loaded"/>
+      </template>
+      <a class="link-boton-regresar" href="javascript:window.history.back();">« Volver atrás</a>
+
     </div>
   </div>
+</div>
 
 </div>
 
@@ -47,6 +53,7 @@
   import ChartDoughnut from "@/components/charts/donutdetail";
   
   import ChartBar from "@/components/chart-bar";
+  import ChartBar2 from "@/components/chartbarmax";
 
   import axios from 'axios';
 
@@ -65,6 +72,7 @@
       headerone,
       ChartDoughnut,
       ChartBar,
+      ChartBar2,
     },
 
     data() {
@@ -85,7 +93,7 @@
           this.ruta3 = this.$route.path
           let paths = this.ruta3.split('/');
           let countridata = paths[paths.length-1];
-         
+
 
           let countryconfirmed = await this.$axios.$get(`/country/${countridata}/status/confirmed/live`);
           let countryrecovered = await this.$axios.$get(`/country/${countridata}/status/recovered/live`);
