@@ -20,7 +20,7 @@ $ npm run generate
 ```
 
 ### Para que sea instalable el dominio  tiene que tener un certificado SSL.
-#### [DEMO DE LA APLICACIÓN - PUEDE INSTALARSE EN LA PC O EN EL TELEFONO](https://covid19-pe.tk/)
+#### [DEMO DE LA APLICACIÓN - PUEDE INSTALARSE EN LA PC O EN EL TELEFONO](https://covid19pe.ml/)
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
